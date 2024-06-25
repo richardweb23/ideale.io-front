@@ -1,0 +1,26 @@
+{
+  "folders": [
+    {
+      "path": "."
+    }
+  ],
+  "settings": {
+    "editor.formatOnSave": false,
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": "explicit"
+    },
+    "eslint.debug": true,
+    "eslint.enable": true,
+    "eslint.options": {
+      "overrideConfigFile": "./.eslintrc.cjs"
+    },
+    "eslint.validate": [
+      "javascript",
+      "javascriptreact",
+      "html",
+      "typescriptreact"
+    ],
+    "eslint.format.enable": false,
+    "editor.fontFamily": "Fire Code, Consolas, 'Courier New', monospace",
+  }
+}
