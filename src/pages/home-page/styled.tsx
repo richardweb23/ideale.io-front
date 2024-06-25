@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import bg from "../../assets/bg1.jpg";
+import { MediaQuery } from "../../styled/GlobalStyles";
 
 export const MainStyled = styled.main`
 	display: flex;
@@ -8,23 +9,22 @@ export const MainStyled = styled.main`
 	min-height: 100vh;
 `;
 
-export const IntroPageStyled = styled.main`
+export const IntroPageStyled = styled.header`
 	width: 100%;
-	height: 600px;
+	height: auto;
 	display: flex;
 	flex-direction: column;
-	padding: 60px;
+	padding: 30px;
 	margin: 0px;
 	text-align: left;
-	padding-left: 0px;
 	background-image: url(${bg});
 	background-repeat: no-repeat;
 	background-size: cover;
-	background-position-y: -400px;
+	background-position-y: center;
 
 	h1,
 	h2 {
-		max-width: 800px;
+		max-width: 100%;
 		line-height: normal;
 		span {
 			background-color: ${(props) => props.theme.colors.secondary};
@@ -35,48 +35,92 @@ export const IntroPageStyled = styled.main`
 		margin-bottom: 40px;
 		font-weight: normal;
 	}
+
+	@media ${MediaQuery.lg} {
+		height: 500px;
+		padding: 60px;
+		margin-left: 0px;
+
+		h2 {
+			max-width: 800px;
+		}
+
+		button {
+			max-width: fit-content;
+		}
+	}
 `;
 
-export const SectionStyled = styled.section`
+export const SectionOneControlerStyled = styled.div`
 	width: 100%;
-	min-height: 500px;
-	height: auto;
-	display: flex;
-	border: 1px solid ${(props) => props.theme.colors.gray};
-	margin: 80px 0px 0px 0px;
-	align-items: stretch;
-`;
-
-export const CollumnStyled = styled.div<{ bg: string }>`
-	width: 500px;
-	height: auto;
-	padding: 50px;
 	display: flex;
 	flex-direction: column;
-	border-right: 1px solid ${(props) => props.theme.colors.gray};
-	background-image: url(${(props) => props.bg});
-	background-repeat: no-repeat;
-	background-size: cover;
-
-	h3 {
-		margin: 90px 0px 30px 0px;
-		line-height: 1.2em;
-	}
-	p {
-		width: 80%;
-		font-size: 1.1em;
-		line-height: 1.8em;
-		color: ${(props) => props.theme.colors.gray};
-	}
-`;
-
-export const CollumnBoxStyled = styled.div`
-	width: 800px;
-	display: flex;
 	flex-wrap: wrap;
 	justify-content: flex-start;
 	align-items: flex-start;
-	padding: 40px;
 	padding-bottom: 0px;
 	margin: 0px auto;
+
+	@media ${MediaQuery.lg} {
+		width: 800px;
+		flex-direction: row;
+		margin: 0px auto;
+		justify-content: center;
+	}
+`;
+
+export const SectionTwoControlerStyled = styled.div`
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	margin: 0px 0px 0px 0px;
+
+	@media ${MediaQuery.lg} {
+		width: 800px;
+		margin: 0px auto;
+		justify-content: space-between;
+		flex-direction: row;
+	}
+`;
+
+export const SectionThreeControlerBGStyled = styled.div<{ bg: string }>`
+	width: 100%;
+	display: flex;
+	background-image: url(${(props) => props.bg});
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+`;
+
+export const SectionThreeControlerStyled = styled.div`
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	padding: 150px 0px 300px 0px;
+
+	.controller {
+		width: 100%;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: flex-start;
+	}
+
+	h1 {
+		width: 100%;
+		text-align: center;
+		font-weight: 400;
+		font-size: 2.3em;
+		margin: 0px 0px 20px 0px;
+	}
+
+	@media ${MediaQuery.lg} {
+		width: 100%;
+		margin: 0px auto;
+		justify-content: space-between;
+		flex-direction: row;
+	}
 `;

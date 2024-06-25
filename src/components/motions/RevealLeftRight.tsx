@@ -13,8 +13,8 @@ export const RevealLeftRight = ({ children }: { children: JSX.Element }) => {
 	return (
 		<motion.div
 			variants={{
-				hidden: { opacity: 0, x: -200 },
-				visible: { opacity: 1, x: 60 },
+				hidden: { opacity: 0, x: -10 },
+				visible: { opacity: 1 },
 			}}
 			initial="hidden"
 			animate={mainControls}

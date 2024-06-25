@@ -2,6 +2,23 @@
 
 import styled, { createGlobalStyle } from "styled-components";
 
+const breakpoints = {
+	xs: "0",
+	sm: "576px",
+	md: "768px",
+	lg: "992px",
+	xl: "1200px",
+	xxl: "1400px",
+};
+
+export const MediaQuery = {
+	sm: `(min-width: ${breakpoints.sm})`,
+	md: `(min-width: ${breakpoints.md})`,
+	lg: `(min-width: ${breakpoints.lg})`,
+	xl: `(min-width: ${breakpoints.xl})`,
+	xxl: `(min-width: ${breakpoints.xxl})`,
+};
+
 const GlobalStyles = createGlobalStyle`
   * {
     box-sizing: border-box;
@@ -14,9 +31,22 @@ const GlobalStyles = createGlobalStyle`
     font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
     max-width: 100vw;
     overflow-x: hidden;
-    font-size: 16px;
+    font-size: 14px;
   }
 
+  @media ${MediaQuery.md} {
+    body {
+      font-size: 15px;
+    }
+  }
+
+  @media ${MediaQuery.sm} {
+    body {
+      font-size: 16px;
+    }
+  }
+
+  
   @media (min-width: 600px) {
     html {
         font-size: 1.125em;
@@ -61,7 +91,11 @@ const GlobalStyles = createGlobalStyle`
 
 export const ContainerStyled = styled.div`
 	width: 100%;
-	padding: 0px 60px 0px 60px;
+	padding: 0px 20px 0px 20px;
+
+	@media ${MediaQuery.lg} {
+		padding: 0px 60px 0px 60px;
+	}
 `;
 
 export default GlobalStyles;
