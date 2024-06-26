@@ -90,7 +90,7 @@ export const SectionThreeControlerBGStyled = styled.div<{ bg: string }>`
 	background-image: url(${(props) => props.bg});
 	background-repeat: no-repeat;
 	background-size: cover;
-	background-position: center;
+	background-position-y: 60%;
 `;
 
 export const SectionThreeControlerStyled = styled.div`
@@ -122,5 +122,120 @@ export const SectionThreeControlerStyled = styled.div`
 		margin: 0px auto;
 		justify-content: space-between;
 		flex-direction: row;
+	}
+`;
+
+export const SectionClientsControlerStyled = styled.div`
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	margin: 0px 0px 0px 0px;
+
+	h1 {
+		width: 100%;
+		text-align: center;
+		font-weight: 400;
+		font-size: 2.3em;
+		margin: 0px 0px 20px 0px;
+	}
+`;
+export const ControlerLogosStyled = styled.div`
+	width: auto;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: stretch;
+	margin: 0px 0px 0px 0px;
+	.logo {
+		width: 100%;
+		display: flex;
+		height: auto;
+		padding: 40px;
+		align-items: center;
+		border-color: #3f4349;
+		border-style: solid;
+		border-width: 1px 1px 0px 1px;
+		justify-content: center;
+
+		&:last-child {
+			border-width: 1px;
+		}
+		img {
+			display: flex;
+		}
+	}
+
+	@media ${MediaQuery.lg} {
+		.logo {
+			width: 50%;
+			border-width: 1px 1px 1px 1px;
+		}
+	}
+
+	@media ${MediaQuery.xl} {
+		.logo {
+			width: 250px;
+			border-width: 1px 0px 1px 1px;
+		}
+	}
+`;
+
+export const DescriptionClientsStyled = styled.div`
+	width: 100%;
+	min-height: 300px;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	border-color: #3f4349;
+	border-style: solid;
+	border-width: 1px 1px 1px 1px;
+	margin-top: 40px;
+
+	.logo {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-right: 1px solid #3f4349;
+		padding: 20px 20px;
+	}
+
+	.column {
+		width: auto;
+		display: flex;
+		flex-direction: column;
+		padding: 0px 20px 40px 20px;
+		p {
+			width: 100%;
+		}
+		a {
+			text-decoration: underline;
+		}
+
+		.list-products {
+			width: auto;
+			height: auto;
+			display: flex;
+			margin: 40px auto 0px auto;
+
+			.product {
+				width: auto;
+				margin: 0px 40px;
+				text-align: center;
+			}
+		}
+	}
+
+	@media ${MediaQuery.lg} {
+		flex-direction: row;
+		flex-wrap: nowrap;
+		.logo {
+			padding: 60px 60px;
+		}
+
+		.column {
+			padding: 60px 60px 60px 60px;
+		}
 	}
 `;

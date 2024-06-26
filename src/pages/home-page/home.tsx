@@ -1,5 +1,6 @@
 import NavBar from "../../components/navbar";
 import { IntroPage } from "./intro";
+import { SectionClients } from "./section-clients";
 import { SectionOne } from "./section-one";
 import { SectionThree } from "./section-three";
 import { SectionTwo } from "./section-two";
@@ -13,6 +14,7 @@ export const HomePage = () => {
 			<SectionOne />
 			<SectionTwo />
 			<SectionThree />
+			<SectionClients />
 		</MainStyled>
 	);
 };
