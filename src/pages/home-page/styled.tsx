@@ -154,7 +154,7 @@ export const ControlerLogosStyled = styled.div`
 		height: auto;
 		padding: 40px;
 		align-items: center;
-		border-color: #3f4349;
+		border-color: ${(props) => props.theme.colors.border.primary};
 		border-style: solid;
 		border-width: 1px 1px 0px 1px;
 		justify-content: center;
@@ -188,7 +188,7 @@ export const DescriptionClientsStyled = styled.div`
 	display: flex;
 	flex-direction: column;
 	flex-wrap: nowrap;
-	border-color: #3f4349;
+	border-color: ${(props) => props.theme.colors.border.primary};
 	border-style: solid;
 	border-width: 1px 1px 1px 1px;
 	margin-top: 40px;
@@ -197,7 +197,7 @@ export const DescriptionClientsStyled = styled.div`
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		border-right: 1px solid #3f4349;
+		border-right: 1px solid ${(props) => props.theme.colors.border.primary};
 		padding: 20px 20px;
 	}
 

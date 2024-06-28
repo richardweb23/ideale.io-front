@@ -1,5 +1,6 @@
 "use client";
 
+import { ComponentProps } from "react";
 import styled, { createGlobalStyle } from "styled-components";
 
 const breakpoints = {
@@ -96,6 +97,35 @@ export const ContainerStyled = styled.div`
 	@media ${MediaQuery.lg} {
 		padding: 0px 60px 0px 60px;
 	}
+`;
+
+export const LabelStyled = styled.label`
+	color: ${(props) => props.theme.colors.gray};
+`;
+
+type Props = ComponentProps<"input"> & {
+	$errorColor?: boolean;
+};
+
+export const InputStyled = styled.input<Props>`
+	color: ${(props) => props.theme.colors.gray};
+	background-color: #000;
+	border-radius: 4px;
+	border: 0px;
+	box-shadow: 0px 0px 0px 1px ${(props) => props.theme.colors.gray};
+	padding: 20px 15px;
+	&:hover {
+		box-shadow: 0px 0px 0px 2px ${(props) => props.theme.colors.gray};
+	}
+
+	${(props) =>
+		props.$errorColor &&
+		`
+    box-shadow: 0px 0px 0px 1px ${props.theme.colors.red};
+    &:hover {
+		  box-shadow: 0px 0px 0px 2px ${props.theme.colors.red};
+	  }
+  `}
 `;
 
 export default GlobalStyles;

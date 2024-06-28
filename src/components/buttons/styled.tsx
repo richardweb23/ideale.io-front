@@ -11,7 +11,7 @@ export const ButtonStyled = styled.button`
 	transition: all 0.3s ease-in;
 
 	&:hover {
-		border: 1px solid #fff;
+		border: 1px solid ${(props) => props.theme.colors.border.primary};
 		background-color: ${(props) => props.theme.colors.background};
 		transition: all 0.3s ease-in;
 	}

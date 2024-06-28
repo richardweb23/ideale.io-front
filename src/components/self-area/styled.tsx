@@ -7,7 +7,7 @@ export const SelfAreaStyled = styled.section`
 	height: auto;
 	display: flex;
 	flex-direction: column;
-	border: 1px solid ${(props) => props.theme.colors.gray};
+	border: 1px solid ${(props) => props.theme.colors.border.primary};
 	margin: 80px 0px 0px 0px;
 	align-items: stretch;
 
@@ -23,7 +23,7 @@ export const SelfAreaCollumnStyled = styled.div<{ bg: string }>`
 	padding: 40px;
 	display: flex;
 	flex-direction: column;
-	border-right: 1px solid ${(props) => props.theme.colors.gray};
+	border-right: 1px solid ${(props) => props.theme.colors.border.primary};
 	background-image: url(${(props) => props.bg});
 	background-repeat: no-repeat;
 	background-size: contain;
