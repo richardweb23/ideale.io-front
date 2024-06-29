@@ -17,6 +17,7 @@ export const IntroPageStyled = styled.header`
 	padding: 30px;
 	margin: 0px;
 	text-align: left;
+	margin-top: 80px;
 	background-image: url(${bg});
 	background-repeat: no-repeat;
 	background-size: cover;

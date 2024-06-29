@@ -8,6 +8,8 @@ export const NavbarStyled = styled.div`
 	padding: 10px 20px;
 	justify-content: space-between;
 	align-items: center;
+	position: fixed;
+	z-index: 1;
 
 	@media ${MediaQuery.lg} {
 		padding: 0px 60px 0px 60px;
