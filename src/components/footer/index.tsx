@@ -3,6 +3,7 @@ import { Button } from "../buttons/button";
 import { Logo } from "../logo";
 import * as S from "./styled";
 import linkedin from "../../assets/linkedin.webp";
+import { HashLink } from "react-router-hash-link";
 
 export const Footer = () => {
 	return (
@@ -29,7 +30,17 @@ export const Footer = () => {
 						<a href="/">Soluções</a>
 						<a href="/">Visão</a>
 						<a href="/">Blog</a>
-						<Button content="Começar" />
+						<HashLink
+							to={"/#contact"}
+							scroll={(e) =>
+								e.scrollIntoView({
+									behavior: "smooth",
+									block: "center",
+								})
+							}
+						>
+							<Button content="Começar" />
+						</HashLink>
 					</S.FooterMenu>
 				</div>
 				<div className="column">

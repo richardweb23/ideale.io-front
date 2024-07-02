@@ -2,6 +2,7 @@ import { MenuStyled, MenuToggleStyled, NavbarStyled } from "./styled";
 import { Logo } from "../logo";
 import { Link, NavLink } from "react-router-dom";
 import { useState } from "react";
+import { HashLink } from "react-router-hash-link";
 
 const NavBar = () => {
 	const [open, setOpen] = useState(true);
@@ -39,7 +40,17 @@ const NavBar = () => {
 					<Link to={"/"}>Blog</Link>
 				</div>
 				<div className="item">
-					<Link to={"/"}>Contato</Link>
+					<HashLink
+						to={"/#contact"}
+						scroll={(e) =>
+							e.scrollIntoView({
+								behavior: "smooth",
+								block: "center",
+							})
+						}
+					>
+						Contato
+					</HashLink>
 				</div>
 				<div className="item">
 					<Link to={"/"}>Área do Cliente</Link>
