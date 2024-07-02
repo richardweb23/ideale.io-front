@@ -24,7 +24,6 @@ export const SectionOne = () => {
 			>
 				<S.SectionOneControlerStyled>
 					<BoxDescription
-						top={"-100px"}
 						icon={<QualityIcon />}
 						title="Engenharia de Qualidade de Software"
 						description="Nós modernizamos a Qualidade. A sinergia de QA com as squads sem dúvida traz ainda mais agilidade e confiança para suas aplicações. Além de reduzir custos."
@@ -43,7 +42,6 @@ export const SectionOne = () => {
 						}}
 					/>
 					<BoxDescription
-						top={"-100px"}
 						icon={<AppsSquadIcon />}
 						title="Desenvolvimento de Apps"
 						description="Desenvolvimento de Apps híbridos e nativos para o empoderamento de estratégias Omnichannel, e ganho de velocidade na relação com o cliente."

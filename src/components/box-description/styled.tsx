@@ -39,14 +39,6 @@ export const BoxDescriptionStyled = styled.div<BoxDescriptionStyledProps>`
 		margin-top: auto;
 	}
 
-	.fio {
-		width: 100%;
-		height: 5px;
-		background-color: #3f4349;
-		margin-top: 20px;
-		border-radius: 7px;
-	}
-
 	.icon {
 		width: 50px;
 		height: 50px;

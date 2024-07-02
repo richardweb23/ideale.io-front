@@ -91,7 +91,8 @@ export const SectionThreeControlerBGStyled = styled.div<{ bg: string }>`
 	background-image: url(${(props) => props.bg});
 	background-repeat: no-repeat;
 	background-size: cover;
-	background-position-y: 60%;
+	background-position-y: 40%;
+	background-position-x: center;
 `;
 
 export const SectionThreeControlerStyled = styled.div`
@@ -99,7 +100,7 @@ export const SectionThreeControlerStyled = styled.div`
 	display: flex;
 	flex-direction: column;
 	flex-wrap: wrap;
-	padding: 150px 0px 300px 0px;
+	padding: 80px 0px 200px 0px;
 
 	.controller {
 		width: 100%;
@@ -138,7 +139,7 @@ export const SectionClientsControlerStyled = styled.div`
 		text-align: center;
 		font-weight: 400;
 		font-size: 2.3em;
-		margin: 0px 0px 20px 0px;
+		margin: 80px 0px 20px 0px;
 	}
 `;
 export const ControlerLogosStyled = styled.div`

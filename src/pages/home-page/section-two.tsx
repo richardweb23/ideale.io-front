@@ -1,4 +1,4 @@
-import bg3 from "../../assets/bg3.webp";
+import bg3 from "../../assets/bg3.png";
 import * as G from "../../styled/GlobalStyles";
 import { BoxDescription } from "../../components/box-description";
 import { SelfArea } from "../../components/self-area";

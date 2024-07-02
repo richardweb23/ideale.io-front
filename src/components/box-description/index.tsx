@@ -28,7 +28,6 @@ export const BoxDescription = ({
 			<h2 dangerouslySetInnerHTML={{ __html: title }} />
 			<p>{description}</p>
 			{button?.onClick && <Button content={button.text} />}
-			{type === "type-1" && <div className="fio" />}
 			{icon && type === "type-2" && <div className="icon">{icon}</div>}
 		</S.BoxDescriptionStyled>
 	);

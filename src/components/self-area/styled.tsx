@@ -34,7 +34,7 @@ export const SelfAreaCollumnStyled = styled.div<{ bg: string }>`
 	}
 	p {
 		width: 100%;
-		color: ${(props) => props.theme.colors.gray};
+		color: #fff;
 	}
 
 	@media ${MediaQuery.md} {
