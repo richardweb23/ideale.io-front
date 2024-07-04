@@ -40,7 +40,7 @@ export const FaleConosco = () => {
 		},
 	});
 	return (
-		<S.FaleConoscoStyled id="contact">
+		<S.FaleConoscoStyled id="form">
 			<div className="description">
 				<h1>Fale conosco!</h1>
 				<p>

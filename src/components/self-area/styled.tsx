@@ -1,30 +1,49 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { MediaQuery } from "../../styled/GlobalStyles";
+import { SafeAreaType } from ".";
 
 export const SelfAreaStyled = styled.section`
 	width: 100%;
-	min-height: 500px;
+	min-height: 200px;
 	height: auto;
 	display: flex;
 	flex-direction: column;
 	border: 1px solid ${(props) => props.theme.colors.border.primary};
-	margin: 80px 0px 0px 0px;
+	margin: 0px 0px 50px 0px;
 	align-items: stretch;
 
 	@media ${MediaQuery.md} {
 		flex-direction: row;
-		margin: 20px 0px 0px 0px;
 	}
 `;
 
-export const SelfAreaCollumnStyled = styled.div<{ bg: string }>`
+const CollumType = (type: SafeAreaType) => {
+	switch (type) {
+		case "title":
+			return css`
+				h3 {
+					text-align: center;
+					margin: 0px 0px 0px 0px;
+				}
+				@media ${MediaQuery.lg} {
+					h3 {
+						margin: 0px 0px 30px 0px;
+					}
+				}
+			`;
+	}
+};
+
+export const SelfAreaCollumnStyled = styled.div<{
+	bg: string;
+	type: SafeAreaType;
+}>`
 	width: 100%;
 	height: auto;
-	padding: 40px;
+	padding: 30px 40px 10px 40px;
 	display: flex;
 	flex-direction: column;
 	border-right: 1px solid ${(props) => props.theme.colors.border.primary};
-	background-image: url(${(props) => props.bg});
 	background-repeat: no-repeat;
 	background-size: contain;
 
@@ -38,12 +57,13 @@ export const SelfAreaCollumnStyled = styled.div<{ bg: string }>`
 	}
 
 	@media ${MediaQuery.md} {
+		padding: 50px;
 		width: 300px;
+		background-image: url(${(props) => props.bg});
 	}
 
 	@media ${MediaQuery.lg} {
 		width: 500px;
-		padding: 50px;
 		background-size: cover;
 
 		h3 {
@@ -56,13 +76,14 @@ export const SelfAreaCollumnStyled = styled.div<{ bg: string }>`
 			line-height: 1.8em;
 		}
 	}
+
+	${({ type }) => CollumType(type)};
 `;
 
 export const SelfAreaCollumnBoxStyled = styled.div`
 	width: 100%;
 	display: flex;
 	padding: 20px;
-	padding-bottom: 0px;
 
 	@media ${MediaQuery.md} {
 		width: calc(100% - 300px);

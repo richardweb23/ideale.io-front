@@ -38,7 +38,7 @@ export const IntroPageStyled = styled.header`
 	}
 
 	@media ${MediaQuery.lg} {
-		height: 500px;
+		min-height: 500px;
 		padding: 60px;
 		margin-left: 0px;
 

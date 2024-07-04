@@ -29,7 +29,7 @@ const GlobalStyles = createGlobalStyle`
 
   html,
   body {
-    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    font-family: "Open Sans", Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
     max-width: 100vw;
     overflow-x: hidden;
     font-size: 14px;
@@ -79,6 +79,9 @@ const GlobalStyles = createGlobalStyle`
   }
 
   h1 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 		font-size: 3em;
   }
   h2 {

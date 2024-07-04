@@ -2,7 +2,7 @@ import { MenuStyled, MenuToggleStyled, NavbarStyled } from "./styled";
 import { Logo } from "../logo";
 import { Link, NavLink } from "react-router-dom";
 import { useState } from "react";
-import { HashLink } from "react-router-hash-link";
+import { NavHashLink } from "react-router-hash-link";
 
 const NavBar = () => {
 	const [open, setOpen] = useState(true);
@@ -34,14 +34,24 @@ const NavBar = () => {
 					</div>
 				</div>
 				<div className="item">
-					<Link to={"/"}>Quem Somos</Link>
+					<NavLink
+						to={"/quem-somos"}
+						className={({ isActive }) => (isActive ? "active" : "")}
+					>
+						Quem Somos
+					</NavLink>
 				</div>
 				<div className="item">
-					<Link to={"/"}>Blog</Link>
+					<NavLink
+						to={"/blog"}
+						className={({ isActive }) => (isActive ? "active" : "")}
+					>
+						Blog
+					</NavLink>
 				</div>
 				<div className="item">
-					<HashLink
-						to={"/#contact"}
+					<NavHashLink
+						to={"/contact/#form"}
 						scroll={(e) =>
 							e.scrollIntoView({
 								behavior: "smooth",
@@ -50,7 +60,7 @@ const NavBar = () => {
 						}
 					>
 						Contato
-					</HashLink>
+					</NavHashLink>
 				</div>
 				<div className="item">
 					<Link to={"/"}>Área do Cliente</Link>

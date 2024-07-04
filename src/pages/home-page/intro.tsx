@@ -6,7 +6,8 @@ export const IntroPage = () => {
 		<S.IntroPageStyled>
 			<h1>
 				Tecnologia para <br /> gerar e manter os <span>clientes</span>{" "}
-				de nossos clientes
+				de
+				<br /> nossos clientes
 			</h1>
 			<h2>
 				Nosso trabalho é desenvolver tecnologias, sob alto rigor de

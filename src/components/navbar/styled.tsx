@@ -37,6 +37,7 @@ export const MenuStyled = styled.menu`
 	top: 0;
 	padding: 40px 40px 0px 40px;
 	display: none;
+	font-weight: 600;
 
 	&.active {
 		display: flex;
