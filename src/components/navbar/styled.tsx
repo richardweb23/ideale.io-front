@@ -5,7 +5,6 @@ export const NavbarStyled = styled.div`
 	width: 100%;
 	display: flex;
 	background: #000;
-	padding: 10px 20px;
 	justify-content: space-between;
 	align-items: center;
 	position: fixed;
@@ -13,7 +12,7 @@ export const NavbarStyled = styled.div`
 	padding: 0px 0px 0px 0px;
 
 	.logo {
-		margin-left: 40px;
+		margin-left: 20px;
 	}
 
 	@media ${MediaQuery.lg} {
@@ -28,7 +27,6 @@ export const MenuStyled = styled.menu`
 	width: 100%;
 	height: 100vh;
 	background-color: #000;
-	display: flex;
 	flex-direction: column;
 	flex-wrap: wrap;
 	position: absolute;
@@ -151,7 +149,6 @@ export const MenuStyled = styled.menu`
 
 export const MenuToggleStyled = styled.div`
 	position: relative;
-	display: inline-block;
 	width: 40px;
 	height: 30px;
 	margin: 25px;

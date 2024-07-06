@@ -10,7 +10,7 @@ export const QuemSomos = () => {
 		<>
 			<HeaderPages
 				title="Nossa missão"
-				subTitle="Desenvolver software de alto padrão, de maneira</br /> otimizada,  transparente e sob alto rigor de qualidade,</br />  para facilitar o dia a dia de trabalho de nossos clientes e</br /> facilitar a relação de compra de seus clientes."
+				subTitle="Desenvolver software de alto padrão, de maneira otimizada,  transparente e sob alto rigor de qualidade,  para facilitar o dia a dia de trabalho de nossos clientes e facilitar a relação de compra de seus clientes."
 			/>
 			<ContainerStyled>
 				<SelfArea type="title" title="Nossa história" bg={bg7}>

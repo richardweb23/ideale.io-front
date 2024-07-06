@@ -14,13 +14,12 @@ export const Portais = () => {
 		<>
 			<HeaderPages
 				title="Tecnologias de portal <br /> emancipam nossos clientes"
-				subTitle="O marketing deu lugar ao growth marketing, e seu dinamismo de aproveitar o que <br />
-      acontece no mundo para impulsionar vendas não é compatível como processos<br />
-      demorados de atualização de página, com a colaboração de programadores.<br />
-      Tecnologias de portal emancipam as equipes de content marketing e jornalismo, além<br />
-      de os ambientes de autoria darem segurança com um processo automático de<br />
-      requisição de autorização para publicação de atualizações.<br />
-      Somos especialistas em desenvolver portais há quase duas décadas e conhecemos<br />
+				subTitle="O marketing deu lugar ao growth marketing, e seu dinamismo de aproveitar o que
+      acontece no mundo para impulsionar vendas não é compatível como processos  demorados de atualização de página, com a colaboração de programadores.<br /><br />
+      Tecnologias de portal emancipam as equipes de content marketing e jornalismo, além
+      de os ambientes de autoria darem segurança com um processo automático de
+      requisição de autorização para publicação de atualizações.<br /><br />
+      Somos especialistas em desenvolver portais há quase duas décadas e conhecemos
       todo universo de tecnologias, melhores práticas e capacidade de entrega."
 			/>
 			<ContainerStyled>

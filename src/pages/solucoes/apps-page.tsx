@@ -12,7 +12,7 @@ export const AppsPage = () => {
 		<>
 			<HeaderPages
 				title="Transformamos hipóteses de <br /> negócio em produtos"
-				subTitle="A maneira de consumir produtos e serviços mudou, e nós estamos prontos para te<br /> ajudar a se adequar. Do Discovery ao Delivery, nosso esforço é garantir o funcionamento<br /> da estratégia, seja ela focada no omnichannel ou na facilidade de uso do cliente."
+				subTitle="A maneira de consumir produtos e serviços mudou, e nós estamos prontos para te ajudar a se adequar. Do Discovery ao Delivery, nosso esforço é garantir o funcionamento da estratégia, seja ela focada no omnichannel ou na facilidade de uso do cliente."
 			/>
 			<ContainerStyled>
 				<SelfArea
@@ -23,6 +23,7 @@ export const AppsPage = () => {
 					<p>
 						Este é o principal motivo que encontramos em nossas
 						demandas de desenvolvimento de apps em clientes.
+						<br />
 						<br />
 						Especialmente por que os projetos nascem de nossos
 						clientes de Portal, interessados em facilitar o acesso

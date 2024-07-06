@@ -14,7 +14,7 @@ export const IntroPageStyled = styled.header`
 	height: auto;
 	display: flex;
 	flex-direction: column;
-	padding: 30px;
+	padding: 20px;
 	margin: 0px;
 	text-align: left;
 	margin-top: 80px;
@@ -25,11 +25,11 @@ export const IntroPageStyled = styled.header`
 
 	h1 {
 		width: 100%;
+		line-height: 1.3em;
 	}
 	h1,
 	h2 {
 		max-width: 100%;
-		line-height: normal;
 		span {
 			background-color: ${(props) => props.theme.colors.secondary};
 		}
@@ -46,6 +46,7 @@ export const IntroPageStyled = styled.header`
 		margin-left: 0px;
 		h1 {
 			width: 700px;
+			line-height: 1.5em;
 		}
 
 		h2 {

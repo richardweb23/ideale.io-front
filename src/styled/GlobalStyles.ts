@@ -99,7 +99,7 @@ export const ContainerStyled = styled.div`
 	padding: 0px 20px 0px 20px;
 
 	@media ${MediaQuery.lg} {
-		padding: 0px 60px 0px 60px;
+		padding: 0px 40px 0px 60px;
 	}
 `;
 
