@@ -23,6 +23,9 @@ export const IntroPageStyled = styled.header`
 	background-size: cover;
 	background-position-y: center;
 
+	h1 {
+		width: 100%;
+	}
 	h1,
 	h2 {
 		max-width: 100%;
@@ -41,6 +44,9 @@ export const IntroPageStyled = styled.header`
 		min-height: 500px;
 		padding: 60px;
 		margin-left: 0px;
+		h1 {
+			width: 700px;
+		}
 
 		h2 {
 			max-width: 800px;
@@ -100,7 +106,7 @@ export const SectionThreeControlerStyled = styled.div`
 	display: flex;
 	flex-direction: column;
 	flex-wrap: wrap;
-	padding: 80px 0px 200px 0px;
+	padding: 80px 0px 50px 0px;
 
 	.controller {
 		width: 100%;
@@ -124,6 +130,7 @@ export const SectionThreeControlerStyled = styled.div`
 		margin: 0px auto;
 		justify-content: space-between;
 		flex-direction: row;
+		padding: 80px 0px 200px 0px;
 	}
 `;
 
@@ -216,15 +223,29 @@ export const DescriptionClientsStyled = styled.div`
 		}
 
 		.list-products {
-			width: auto;
+			width: 100%;
 			height: auto;
 			display: flex;
+			flex-direction: column;
+			flex-wrap: wrap;
 			margin: 40px auto 0px auto;
 
 			.product {
 				width: auto;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
 				margin: 0px 40px;
 				text-align: center;
+
+				img {
+					display: flex;
+					margin: 0px auto 10px auto;
+				}
+
+				p {
+					margin-bottom: 40px;
+				}
 			}
 		}
 	}
@@ -235,9 +256,20 @@ export const DescriptionClientsStyled = styled.div`
 		.logo {
 			padding: 60px 60px;
 		}
-
 		.column {
 			padding: 60px 60px 60px 60px;
+			justify-content: center;
+			.list-products {
+				flex-direction: row;
+				flex-wrap: nowrap;
+				justify-content: center;
+
+				.product {
+					p {
+						margin-bottom: 0px;
+					}
+				}
+			}
 		}
 	}
 `;

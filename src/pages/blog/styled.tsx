@@ -47,7 +47,7 @@ export const ArticlePageStyled = styled.div`
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
-	padding: 120px 40px 60px 40px;
+	padding: 120px 20px 60px 20px;
 	margin: 0px 0px 30px 0px;
 	color: ${(props) => props.theme.colors.gray};
 
@@ -64,6 +64,7 @@ export const ArticlePageStyled = styled.div`
 		h1 {
 			color: #fff;
 			margin: 20px 0px;
+			font-size: 2em;
 		}
 		h3 {
 			font-size: 1.5em;
@@ -88,6 +89,10 @@ export const ArticlePageStyled = styled.div`
 		article {
 			width: 900px;
 			padding: 40px 60px;
+
+			h1 {
+				font-size: 3em;
+			}
 		}
 	}
 `;
