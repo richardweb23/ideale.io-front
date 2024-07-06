@@ -77,6 +77,27 @@ export const SelfAreaCollumnStyled = styled.div<{
 		}
 	}
 
+	.icon-controler {
+		width: 100%;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		justify-content: center;
+
+		.icon {
+			width: 80px;
+			display: flex;
+			margin: 0px auto 20px auto;
+			color: ${({ theme }) => theme.colors.blue.primary};
+		}
+		h3 {
+			width: auto;
+			font-size: 1.3em;
+			margin: 0px auto;
+		}
+	}
+
 	${({ type }) => CollumType(type)};
 `;
 

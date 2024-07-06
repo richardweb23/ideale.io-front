@@ -15,7 +15,7 @@ import {
 
 export const SectionTwo = () => {
 	return (
-		<G.ContainerStyled>
+		<G.ContainerStyled id={"section-two"}>
 			<SelfArea
 				title="Método Ideale de Gestão"
 				description="Nossa Gestão de Projetos tem como base o

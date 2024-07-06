@@ -99,6 +99,9 @@ export const MenuStyled = styled.menu`
 					color: ${(props) => props.theme.colors.secondary};
 					transition: all 0.2s ease-in;
 				}
+				&.active {
+					color: ${(props) => props.theme.colors.secondary};
+				}
 			}
 		}
 	}

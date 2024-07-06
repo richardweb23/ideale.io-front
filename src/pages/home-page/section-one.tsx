@@ -9,10 +9,16 @@ import {
 	RoadMapIcon,
 	WorldIcon,
 } from "../../components/icons";
+import { useNavigate } from "react-router-dom";
+import { AppConfig } from "../../config";
+import { useScroll } from "../../components/hook/useScroll";
 
 export const SectionOne = () => {
+	const navigate = useNavigate();
+	const { pathnames } = AppConfig();
+	const { scrollTo } = useScroll();
 	return (
-		<G.ContainerStyled>
+		<G.ContainerStyled id={"section-one"}>
 			<SelfArea
 				title="O que seu <br /> negócio precisa?"
 				description="Com mais de 15 anos de experiência em Portais,
@@ -37,7 +43,7 @@ export const SectionOne = () => {
 						title="Desenvolvimento de Portais"
 						description="São mais de 15 anos no mercado de Portais, atuando em implantações e treinamento de emancipação de equipes de marketing e jornalismo para atuação em ambientes de autoria, migração de portais para versões mais recentes em base de grande dimensão, e desenvolvimento de conexões com CRMs e outros softwares que colaborem com o ecossistema de TI de nossos clientes."
 						button={{
-							onClick: () => console.log(""),
+							onClick: () => navigate(pathnames.solucoesPortais),
 							text: "Saiba mais",
 						}}
 					/>
@@ -46,7 +52,7 @@ export const SectionOne = () => {
 						title="Desenvolvimento de Apps"
 						description="Desenvolvimento de Apps híbridos e nativos para o empoderamento de estratégias Omnichannel, e ganho de velocidade na relação com o cliente."
 						button={{
-							onClick: () => console.log(""),
+							onClick: () => navigate(pathnames.solucoesApps),
 							text: "Saiba mais",
 						}}
 					/>
@@ -55,7 +61,7 @@ export const SectionOne = () => {
 						title="Jeito Ideale de Gestão de Projetos"
 						description="O clientes Ideale têm visão do processo do início ao fim, com o auxílio de ferramentas de gestão de processos e dashboards, para acompanhamento em tempo real da evolução e sucesso do projeto/entrega."
 						button={{
-							onClick: () => console.log(""),
+							onClick: () => scrollTo("section-two"),
 							text: "Saiba mais",
 						}}
 					/>

@@ -1,11 +1,14 @@
 "use client";
 
+import { Link } from "react-router-dom";
 import { LogoSyled } from "./styled";
 
 export const Logo = () => {
 	return (
-		<LogoSyled className="logo">
-			ideale<span>.io</span>
-		</LogoSyled>
+		<Link to={"/"}>
+			<LogoSyled className="logo">
+				ideale<span>.io</span>
+			</LogoSyled>
+		</Link>
 	);
 };

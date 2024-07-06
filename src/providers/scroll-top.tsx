@@ -1,14 +1,16 @@
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
+import { useScroll } from "../components/hook/useScroll";
 
 export const ScrollToTop = ({ children }: { children: JSX.Element }) => {
 	const { pathname } = useLocation();
+	const { scrollTop, scrollTo } = useScroll();
 	useEffect(() => {
-		window.scrollTo({
-			top: 0,
-			left: 0,
-			behavior: "smooth",
-		});
+		scrollTop();
+
+		if (pathname === "/contato") {
+			scrollTo("contato");
+		}
 	}, [pathname]);
 
 	return children;

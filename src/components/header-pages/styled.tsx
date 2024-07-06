@@ -6,7 +6,7 @@ export const HeaderPagesStyled = styled.div`
 	width: 100%;
 	display: flex;
 	min-height: 400px;
-	padding: 120px 0px 150px 0px;
+	padding: 120px 0px 100px 0px;
 	flex-direction: column;
 	background-image: url(${bg6});
 	background-size: cover;
@@ -17,15 +17,17 @@ export const HeaderPagesStyled = styled.div`
 
 	h1 {
 		width: 100%;
+		line-height: 1.2em;
+		margin-bottom: 10px;
 	}
 
 	h2 {
 		width: 100%;
-		font-size: 1.5em;
+		font-size: 1.2em;
 		font-weight: normal;
 	}
 
 	@media ${MediaQuery.lg} {
-		padding: 150px 60px 120px 60px;
+		padding: 150px 60px 75px 60px;
 	}
 `;

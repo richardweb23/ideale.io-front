@@ -8,6 +8,7 @@ interface Props {
 	type?: S.BoxDescriptionStyledProps["type"];
 	button?: {
 		onClick?: () => void;
+		hashLink?: string;
 		text?: string;
 	};
 	icon?: JSX.Element;
@@ -27,7 +28,9 @@ export const BoxDescription = ({
 			{icon && type === "type-1" && <div className="icon">{icon}</div>}
 			<h2 dangerouslySetInnerHTML={{ __html: title }} />
 			<p>{description}</p>
-			{button?.onClick && <Button content={button.text} />}
+			{button?.onClick && (
+				<Button content={button.text} onClick={button.onClick} />
+			)}
 			{icon && type === "type-2" && <div className="icon">{icon}</div>}
 		</S.BoxDescriptionStyled>
 	);

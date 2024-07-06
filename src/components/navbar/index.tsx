@@ -2,10 +2,21 @@ import { MenuStyled, MenuToggleStyled, NavbarStyled } from "./styled";
 import { Logo } from "../logo";
 import { Link, NavLink } from "react-router-dom";
 import { useState } from "react";
-import { NavHashLink } from "react-router-hash-link";
+import { AppConfig } from "../../config";
+import { useScroll } from "../hook/useScroll";
 
 const NavBar = () => {
 	const [open, setOpen] = useState(true);
+	const { pathnames } = AppConfig();
+	const { scrollTop } = useScroll();
+
+	const closeMenuWidth = () => {
+		const { innerWidth: width } = window;
+		if (width <= 991) {
+			setOpen(!open);
+		}
+	};
+
 	return (
 		<NavbarStyled>
 			<Logo />
@@ -15,27 +26,43 @@ const NavBar = () => {
 			>
 				<span></span>
 			</MenuToggleStyled>
-			<MenuStyled className={`${open ? "active" : ""}`}>
+			<MenuStyled
+				className={`${open ? "active" : ""}`}
+				onClick={() => closeMenuWidth()}
+			>
 				<div className="item">
 					<NavLink
-						to={"/"}
+						to={pathnames.home}
 						className={({ isActive }) => (isActive ? "active" : "")}
+						onClick={scrollTop}
 					>
 						Home
 					</NavLink>
 				</div>
 				<div className="item sub">
-					<a href="#" onClick={(e) => e.preventDefault()}>
+					<NavLink
+						to={pathnames.solucoes}
+						className={({ isActive }) => (isActive ? "active" : "")}
+					>
 						Soluções
-					</a>
+					</NavLink>
 					<div className={"submenu"}>
-						<NavLink to="">Desenvolvimento de portais</NavLink>
-						<NavLink to="">Desenvolvimento de apps</NavLink>
+						<NavLink to={pathnames.solucoesPortais}>
+							Desenvolvimento de portais
+						</NavLink>
+						<NavLink
+							to={pathnames.solucoesApps}
+							className={({ isActive }) =>
+								isActive ? "active" : ""
+							}
+						>
+							Desenvolvimento de apps
+						</NavLink>
 					</div>
 				</div>
 				<div className="item">
 					<NavLink
-						to={"/quem-somos"}
+						to={pathnames.quemsomos}
 						className={({ isActive }) => (isActive ? "active" : "")}
 					>
 						Quem Somos
@@ -43,27 +70,17 @@ const NavBar = () => {
 				</div>
 				<div className="item">
 					<NavLink
-						to={"/blog"}
+						to={pathnames.blog}
 						className={({ isActive }) => (isActive ? "active" : "")}
 					>
 						Blog
 					</NavLink>
 				</div>
 				<div className="item">
-					<NavHashLink
-						to={"/contact/#form"}
-						scroll={(e) =>
-							e.scrollIntoView({
-								behavior: "smooth",
-								block: "center",
-							})
-						}
-					>
-						Contato
-					</NavHashLink>
+					<NavLink to={pathnames.contato}>Contato</NavLink>
 				</div>
 				<div className="item">
-					<Link to={"/"}>Área do Cliente</Link>
+					<Link to={pathnames.areaCliente}>Área do Cliente</Link>
 				</div>
 			</MenuStyled>
 		</NavbarStyled>

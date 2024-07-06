@@ -3,9 +3,10 @@ import { Button } from "../buttons/button";
 import { Logo } from "../logo";
 import * as S from "./styled";
 import linkedin from "../../assets/linkedin.webp";
-import { HashLink } from "react-router-hash-link";
+import { useScroll } from "../hook/useScroll";
 
 export const Footer = () => {
+	const { scrollTo } = useScroll();
 	return (
 		<G.ContainerStyled>
 			<S.FooterStyled>
@@ -30,17 +31,10 @@ export const Footer = () => {
 						<a href="/">Soluções</a>
 						<a href="/">Visão</a>
 						<a href="/">Blog</a>
-						<HashLink
-							to={"/#contact"}
-							scroll={(e) =>
-								e.scrollIntoView({
-									behavior: "smooth",
-									block: "center",
-								})
-							}
-						>
-							<Button content="Começar" />
-						</HashLink>
+						<Button
+							content="Começar"
+							onClick={() => scrollTo("contato")}
+						/>
 					</S.FooterMenu>
 				</div>
 				<div className="column">

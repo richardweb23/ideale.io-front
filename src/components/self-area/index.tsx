@@ -7,6 +7,7 @@ interface Props {
 	description?: string;
 	children: ReactNode;
 	bg: string;
+	icon?: JSX.Element;
 }
 
 export const SelfArea = ({
@@ -15,12 +16,26 @@ export const SelfArea = ({
 	description,
 	bg,
 	type = "description",
+	icon,
 }: Props) => {
 	return (
 		<S.SelfAreaStyled>
 			<S.SelfAreaCollumnStyled bg={bg} type={type}>
-				<h3 dangerouslySetInnerHTML={{ __html: title }} />
-				<p dangerouslySetInnerHTML={{ __html: description || "" }} />
+				{icon ? (
+					<div className="icon-controler">
+						<div className="icon">{icon}</div>
+						<h3 dangerouslySetInnerHTML={{ __html: title }} />
+					</div>
+				) : (
+					<>
+						<h3 dangerouslySetInnerHTML={{ __html: title }} />
+						<p
+							dangerouslySetInnerHTML={{
+								__html: description || "",
+							}}
+						/>
+					</>
+				)}
 			</S.SelfAreaCollumnStyled>
 			<S.SelfAreaCollumnBoxStyled>{children}</S.SelfAreaCollumnBoxStyled>
 		</S.SelfAreaStyled>

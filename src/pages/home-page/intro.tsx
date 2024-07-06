@@ -1,7 +1,9 @@
 import { Button } from "../../components/buttons/button";
+import { useScroll } from "../../components/hook/useScroll";
 import * as S from "./styled";
 
 export const IntroPage = () => {
+	const { scrollTo } = useScroll();
 	return (
 		<S.IntroPageStyled>
 			<h1>
@@ -16,7 +18,10 @@ export const IntroPage = () => {
 				performático e auto gerenciável, na geração de leads e
 				manutenção de suas bases de clientes
 			</h2>
-			<Button content="Saiba Mais" />
+			<Button
+				content="Saiba Mais"
+				onClick={() => scrollTo("section-one")}
+			/>
 		</S.IntroPageStyled>
 	);
 };

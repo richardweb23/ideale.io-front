@@ -5,7 +5,7 @@ import * as S from "./styled";
 
 export const SectionThree = () => {
 	return (
-		<S.SectionThreeControlerBGStyled bg={bg4}>
+		<S.SectionThreeControlerBGStyled bg={bg4} id={"section-three"}>
 			<G.ContainerStyled>
 				<S.SectionThreeControlerStyled>
 					<h1>Temos orgulho destes números</h1>
