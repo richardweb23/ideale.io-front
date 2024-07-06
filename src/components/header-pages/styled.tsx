@@ -6,7 +6,6 @@ export const HeaderPagesStyled = styled.div`
 	width: 100%;
 	display: flex;
 	min-height: 400px;
-	padding: 120px 0px 100px 0px;
 	flex-direction: column;
 	background-image: url(${bg6});
 	background-size: cover;

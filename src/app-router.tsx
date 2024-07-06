@@ -6,25 +6,37 @@ import { QuemSomos } from "./pages/quem-somos";
 import { ScrollToTop } from "./providers/scroll-top";
 import { Portais } from "./pages/solucoes/portais-page";
 import { AppsPage } from "./pages/solucoes/apps-page";
+import { BlogPage } from "./pages/blog";
+import { AppConfig } from "./config";
+import { ArticlePage } from "./pages/blog/article";
 
 function App() {
+	const { pathnames } = AppConfig();
 	return (
 		<BrowserRouter>
 			<ScrollToTop>
 				<>
 					<NavBar />
 					<Routes>
-						<Route path="/" Component={HomePage} />
-						<Route path="/contato" Component={HomePage} />
-						<Route path="/quem-somos" Component={QuemSomos} />
-						<Route path="/solucoes" Component={Portais} />
+						<Route path={pathnames.home} Component={HomePage} />
+						<Route path={pathnames.contato} Component={HomePage} />
 						<Route
-							path="/solucoes/desenvolvimento-portais"
+							path={pathnames.quemsomos}
+							Component={QuemSomos}
+						/>
+						<Route path={pathnames.solucoes} Component={Portais} />
+						<Route
+							path={pathnames.solucoesPortais}
 							Component={Portais}
 						/>
 						<Route
-							path="/solucoes/desenvolvimento-apps"
+							path={pathnames.solucoesApps}
 							Component={AppsPage}
+						/>
+						<Route path={pathnames.blog} Component={BlogPage} />
+						<Route
+							path={`${pathnames.blog}/:id`}
+							Component={ArticlePage}
 						/>
 					</Routes>
 					<Footer />
