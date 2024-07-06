@@ -6,7 +6,7 @@ import { AppConfig } from "../../config";
 import { useScroll } from "../hook/useScroll";
 
 const NavBar = () => {
-	const [open, setOpen] = useState(true);
+	const [open, setOpen] = useState(false);
 	const { pathnames } = AppConfig();
 	const { scrollTop } = useScroll();
 
